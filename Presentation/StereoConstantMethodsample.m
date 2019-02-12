@@ -1151,7 +1151,7 @@ end % for currenttrial=1:1:numel(design)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 experimentDuration=GetSecs()-the_experiment_start;
-event=event.add_event('End',[],the_experiment_start);
+event=event.add_event('End',[]);
 disp(' ');
 disp(['Experiment Duration was: ', num2str(experimentDuration)]);
 disp(' ');
