@@ -238,6 +238,7 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 %%%% Check the input variables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+clear global; clear mex;
 if nargin<2, help(mfilename()); return; end
 if nargin<3 || isempty(displayfile), displayfile=[]; end
 if nargin<4 || isempty(stimulusfile), stimulusfile=[]; end
@@ -1239,6 +1240,7 @@ rmpath(genpath(fullfile(rootDir,'..','Common')));
 rmpath(fullfile(rootDir,'..','Generation'));
 rmpath(fullfile(rootDir,'..','mpsignifit'));
 %setenv('PATH',strrep(getenv('PATH'),[';',fullfile(rootDir,'..','mpsignifit')],''));
+clear all; clear mex; clear global;
 diary off;
 
 
@@ -1264,6 +1266,7 @@ catch %#ok
   rmpath(genpath(fullfile(rootDir,'..','Common')));
   rmpath(fullfile(rootDir,'..','Generation'));
   rmpath(fullfile(rootDir,'..','mpsignifit'));
+  clear all; clear mex; clear global;
   return
 end % try..catch
 
