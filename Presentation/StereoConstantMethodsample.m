@@ -3,17 +3,34 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 % function StereoConstantMethodsample(subjID,acq,:displayfile,:stimlusfile,:gamma_table,:overwrite_flg,:force_proceed_flag)
 % (: is optional)
 %
-% Displays rectangular planes with binocular disparities (+/- arcmings) for testing psychophysical depth
-% discrimination acuity based on binocular disparity.
-% This script shoud be used with MATLAB Psychtoolbox version 3 or above.
-% This is a full update of the old NearFarRectangleBehavior.m so as to be compatible with the new PTB3 toolbox
-% (especially new PsychImaging functions) and new 3D viewing setup with an nVidia graphics card and 3D vision tools.
+% - This is a sample MATLAB Psychtoolbox-3 (PTB3) script for Constant-method psychophysics experiment on 3D vision.
+% - Displays rectangular planes with binocular disparities (+/- arcmings) for testing psychophysical depth
+%   discrimination acuity based on binocular disparity.
+% - This script should be used with MATLAB Psychtoolbox version 3 or above.
+% - This is a full update of the old NearFarRectangleBehavior.m so as to be compatible with the new PTB3 toolbox
+%   (especially new PsychImaging functions) and new 3D viewing setup with an nVidia graphics card and 3D vision tools.
+% - You can only run this script on Windows OS due to the current psignifit tool compatibility implemented in
+%   this script. Before running the test, please add a path to the psignifit executables to you 'PATH'
+%   environmental variable (or you can uncomment setenv() descriptions to set the environmental variable
+%   from this script).
 %
-% You can only run this script on Windows OS due to the current psignifit tool compatibility implemented in
-% this script. Before running the test, please add a path to the psignifit executables to you 'PATH'
-% environmental variable (or you can uncomment setenv() descriptions to set the environmental variable
-% from this script).
+% Programmed : "Tue Aug 17 12:25:39 2010 ban"
+% Last Update: "2021-06-13 22:37:49 ban"
 %
+% [how to run the script]
+% 1. On the MATLAB shell, please change the working directory to
+%    ~/StereoConstantMethodsample/Presentation/
+% 2. Run the "run_exp" script
+%    >> run_exp('subj_name',1);
+%    Here, the first input variable is subject name or ID, such as 'HB' or 's01',
+%    the second variable should be 1 or 2,
+%
+% [acknowledgment]
+% This screening uses Psignifit (mpsignifit) tool develped by Ingo Frund, Valentin Hanel and Felix Wichmann,
+% in computing the subject discrimination threshold and psychmetric functions. 
+% https://github.com/wichmann-lab/psignifit/wiki
+% https://github.com/wichmann-lab/psignifit/archive/master.zip
+% We would like to express our sincere gratitudes to the authors for sharing the great tool.
 %
 % [input variables]
 % sujID         : ID of subject, string, such as 's01'
@@ -228,10 +245,6 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 %
 % [reference]
 % for stmulus generation, see ../Generation & ../Common directories.
-%
-%
-% Programmed : "Tue Aug 17 12:25:39 2010 ban"
-% Last Update: "2018-02-17 17:08:43 ban"
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
