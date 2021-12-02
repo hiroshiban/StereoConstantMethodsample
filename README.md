@@ -2,7 +2,7 @@
 # **README on StereoConstantMethodsample**
 
 <div>Created    : "2010-08-17 12:25:39 ban"</div>
-<div>Last Update: "2021-12-02 22:58:35 ban"
+<div>Last Update: "2021-12-02 23:02:22 ban"
 
 **********
 
@@ -20,7 +20,7 @@
 - Currently, you can run this sample only on Windows OS since the psignifit tool linked from this package is only compatible with Windows.
   To run this sample on Mac OSX and Linux boxes, you have to set psignifit tool so that it works properly on these machines. Then, please change the psignifit-related codes of *~/StereoConstantMethodsample/Presentation/StereoConstantMethodsample.m*.
 - Before running the sample, please add a path to the psignifit executables to your 'PATH' environmental variable.
-- ***Finally, this package is made publicly available in the hope of  keeping our research group being transparent and open. Furthermore, the package is made open also for people who are interested in our group's research activities, who want to join our group in the near future, and who want to learn how to create stereo stimuli for vision science.*** To these ends, I have tried to make the samples as simple as possible (but also as real as possible so as to be available in the real experiments in the form of what this package is) with omitting any kinds of hacking-like codes to compensate stimulus presentation timings etc. If you need such routines, please check the other stimulus presentation codes in my [**Retinotopy**](https://github.com/hiroshiban/retinotopy) repository etc.)
+- ***Finally, this package is made publicly available in the hope of keeping our research group being transparent and open. Furthermore, the package is made open also for people who are interested in our group's research activities, who want to join our group in the near future, and who want to learn how to create stereo stimuli for vision science.*** To these ends, I have tried to make the samples as simple as possible (but also as real as possible so as to be available in the real experiments in the form of what this package is) with omitting any kinds of hacking-like codes to compensate stimulus presentation timings etc. If you need such routines, please check the other stimulus presentation codes in my [**Retinotopy**](https://github.com/hiroshiban/retinotopy) repository etc.)
 
 (Matlab is a registered trademark of [***The Mathworks Inc.*** ](https://www.mathworks.com/) )  
 
