@@ -15,7 +15,7 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 %   from this script).
 %
 % Programmed : "Tue Aug 17 12:25:39 2010 ban"
-% Last Update: "2021-06-13 22:37:49 ban"
+% Last Update: "2021-12-02 22:56:33 ban"
 %
 % [how to run the script]
 % 1. On the MATLAB shell, please change the working directory to
@@ -223,7 +223,7 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 % The stimuli are presented as below,
 %
 % ***************************************************
-% *** 1 AFC (when sparam.reference_disparity=NaN) ***
+% *** A-or-B task (when sparam.reference_disparity=NaN) ***
 % ***************************************************
 %
 % stim -- blank -- response -- stim -- blank -- response -- stim -- blank -- reseponse ...
