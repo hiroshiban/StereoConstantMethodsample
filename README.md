@@ -2,7 +2,7 @@
 # **README on StereoConstantMethodsample**
 
 <div>Created    : "2010-08-17 12:25:39 ban"</div>
-<div>Last Update: "2021-12-02 23:02:22 ban"
+<div>Last Update: "2021-12-03 12:34:17 ban"
 
 **********
 
@@ -160,7 +160,7 @@ as (subjID)_StereoConstantMethodsample_results_run_(run_num).mat.
 
 An example of "displayfile":  
 
-<pre>
+````MATLAB
 % ************************************************************
 % This is the display file for StereoConstantMethodsample
 % Please change the parameters below.
@@ -207,14 +207,14 @@ dparam.ScrHeight=1200;
 
 % the resolution of the screen width
 dparam.ScrWidth=1920;
-</pre>
+````
 
 
 **Details of stimulusfile**
 
 An example of "stimulusfile":  
 
-<pre>
+````MATLAB
 % ************************************************************
 % This is the stimulus file for StereoConstantMethodsample
 % Please change the parameters below.
@@ -314,4 +314,4 @@ run(fullfile(fileparts(mfilename('fullpath')),'sizeparams'));
 %sparam.ipd=6.4;
 %sparam.pix_per_cm=57.1429;
 %sparam.vdist=65;
-</pre>
+````
