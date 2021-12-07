@@ -15,7 +15,7 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 %   from this script).
 %
 % Programmed : "Tue Aug 17 12:25:39 2010 ban"
-% Last Update: "2021-12-02 22:56:33 ban"
+% Last Update: "2021-12-08 04:31:33 ban"
 %
 % [how to run the script]
 % 1. On the MATLAB shell, please change the working directory to
@@ -38,7 +38,7 @@ function StereoConstantMethodsample(subjID,acq,displayfile,stimulusfile,gamma_ta
 %                 !!! if 'debug' (case insensitive) is included          !!!
 %                 !!! in subjID string, this program runs as DEBUG mode; !!!
 %                 !!! stimulus images are saved as *.png format at       !!!
-%                 !!! ~/CurvatureShading/Presentation/images             !!!
+%                 !!! ~/StereoConstantMethodsample/Presentation/images   !!!
 %                 !!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!
 % acq           : acquisition number (design file number),
 %                 a integer, such as 1, 2, 3, ...

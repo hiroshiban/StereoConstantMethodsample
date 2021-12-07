@@ -1,8 +1,7 @@
-
 # **README on StereoConstantMethodsample**
 
 <div>Created    : "2010-08-17 12:25:39 ban"</div>
-<div>Last Update: "2021-12-07 17:19:09 ban"
+<div>Last Update: "2021-12-08 05:23:52 ban"
 
 **********
 
@@ -20,7 +19,8 @@
 - Currently, you can run this sample only on Windows OS since the psignifit tool linked from this package is only compatible with Windows.
   To run this sample on Mac OSX and Linux boxes, you have to set psignifit tool so that it works properly on these machines. Then, please change the psignifit-related codes of *~/StereoConstantMethodsample/Presentation/StereoConstantMethodsample.m*.
 - Before running the sample, please add a path to the psignifit executables to your 'PATH' environmental variable.
-- ***Finally, this package is made publicly available in the hope of keeping our research group being transparent and open. Furthermore, the package is made open also for people who are interested in our group's research activities, who want to join our group in the near future, and who want to learn how to create stereo stimuli for vision science.*** To these ends, I have tried to make the samples as simple as possible (but also as real as possible so as to be available in the real experiments in the form of what this package is) with omitting any kinds of hacking-like codes to compensate stimulus presentation timings etc. If you need such routines, please check the other stimulus presentation codes in my [**Retinotopy**](https://github.com/hiroshiban/retinotopy) repository etc.)
+- Please note that, in general, if we use PTB3, RDS stimuli can be easily generated with Screen('DrawDots') function. However, the dots generated with the simple PTB3 function are not antialiased, which may cause some problem due to round-offs of the fine depth structures. Therefore, in this function, I am taking a different strategy to generate RDSs by putting antialiased (Gaussian-smoothed) dots with alpha-channel (transparency) setups and by oversampling the position shift (horizontal binocular disparity). That is why the stimulus generation pipeline in this function is a bit complicated. If you don't care such the antialiased matter at all, the script can be made more concise and much simpler. Maybe there's a better way...
+- ***Finally, this package is made publicly available in the hope of keeping our research group being transparent and open. Furthermore, the package is made open also for people who want to know our group's research activities, who want to join our group in the near future, and who want to learn how to create stereo stimuli for vision science. If you are interested in our research projects, please feel free to contact us.*** Anyway, to these ends, I have tried to make the samples as simple as possible (but also as real as possible so as to be available in the real experiments in the form of what this package is) with omitting any kinds of hacking-like codes to compensate stimulus presentation timings etc. If you need such routines, please check the other stimulus presentation codes in my [**Retinotopy**](https://github.com/hiroshiban/retinotopy) repository etc.).
 
 (Matlab is a registered trademark of [***The Mathworks Inc.*** ](https://www.mathworks.com/) )  
 
@@ -74,13 +74,10 @@ The StereoConstantMethodsample package uses **Psychtoolboox** library for genera
 2. Run the "***run_exp***" script as  
 
    ````MATLAB
-   >> run_exp('subj_name',1); % this is a simple script that calls
-   >>                         % StereoConstantMethodsample.m with
-   >>                         % some condition files.
+   >> run_exp('subj_name',1);
    ````
 
-   Here, the first input variable is subject name or ID, such as 'HB' or 's01',  
-   the second variable should be 1 or 2,  
+   Here, 'run_exp' is a simple script that calls the main StereoConstantMethodsample function. The first input variable is subject name or ID, such as 'HB' or 's01', and the second variable should be 1 or 2,  
 
 For more details, please see the documents in *StereoConstantMethodsample.m*  
 Also please see the parameter files in *~/StereoConstantMethodsample/Presentation/subj/_DEFAULT_/*.  
@@ -112,7 +109,7 @@ sujID         : ID of subject, string, such as 's01'
                 !!! if 'debug' (case insensitive) is included          !!!
                 !!! in subjID string, this program runs as DEBUG mode; !!!
                 !!! stimulus images are saved as *.png format at       !!!
-                !!! ~/CurvatureShading/Presentation/images             !!!
+                !!! ~/StereoConstantMethodsample/Presentation/images   !!!
                 !!!!!!!!!!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!!!!!!!!!!!!!
 acq           : acquisition number (design file number),
                 a integer, such as 1, 2, 3, ...
@@ -121,7 +118,7 @@ displayfile   : (optional) display condition file, such as 'shadow_display_fmri.
 stimulusfile  : (optional) stimulus condition file, such as 'shadow_stimulus_exp1.m'
                 all of the stimuli in this script are generated in real-time based on
                 the parameters in the stimulus file. For details, please see this
-                function and the other function in ../Generation and ../Common directries.
+                function and the other function in ../Generation and ../Common directories.
                 as an example, please see ~/StereoConstantMethodsample/subjects/_DEFAULT_/nf_stimulus.m
 gamma_table   : (optional) table(s) of gamma-corrected video input values (Color LookupTable).
                 256(8-bits) x 3(RGB) x 1(or 2,3,... when using multiple displays) matrix
@@ -136,8 +133,8 @@ overwrite_flg : (optional) whether overwriting pre-existing result file. if 1, t
                 file with the same acquisition number will be overwritten by the previous one.
                 if 0, the existing file will be backed-up by adding a prefix '_old' at the tail
                 of the file. 0 by default.
-force_proceed_flag : (optional) whether proceeding stimulus presentatin without waiting for
-                the experimenter response (e.g. presesing the ENTER key) or a trigger.
+force_proceed_flag : (optional) whether proceeding stimulus presentation without waiting for
+                the experimenter response (e.g. pressing the ENTER key) or a trigger.
                 if 1, the stimulus presentation will be automatically carried on.
 
 NOTE:
@@ -165,7 +162,7 @@ An example of "displayfile":
 % ************************************************************
 % This is the display file for StereoConstantMethodsample
 % Please change the parameters below.
-% MotionParallaxConstant.m
+%
 % Programmed by Hiroshi Ban   Aug 24 2015
 % ************************************************************
 
@@ -219,7 +216,7 @@ An example of "stimulusfile":
 % ************************************************************
 % This is the stimulus file for StereoConstantMethodsample
 % Please change the parameters below.
-% MotionParallaxConstant.m
+%
 % Programmed by Hiroshi Ban   Aug 24 2015
 % ************************************************************
 
