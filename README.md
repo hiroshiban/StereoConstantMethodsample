@@ -2,16 +2,16 @@
 # **README on StereoConstantMethodsample**
 
 <div>Created    : "2010-08-17 12:25:39 ban"</div>
-<div>Last Update: "2021-12-03 12:34:17 ban"
+<div>Last Update: "2021-12-07 17:19:09 ban"
 
 **********
 
-**StereoConstantMethodsample**
+## **StereoConstantMethodsample**
 
 
 ![StereoConstantMethodsample](imgs/StereoConstantMethodsample.png)  
 
-**A sample stimulus presentation package for stereo vision psychophysics experiment (Constant method) in our research group**  
+**Sample stimulus presentation codes for stereo vision psychophysics experiment (Constant method) in our research group**  
 
 - This package contains a set of sample **MATLAB and Psychtoolbox-3 (PTB3)** scripts for Constant-method psychophysics experiment on 3D vision.
 - It displays rectangular depth planes defined by binocular disparities (+/- arcmins) for testing psychophysical disparity discrimination acuity.
@@ -25,7 +25,7 @@
 (Matlab is a registered trademark of [***The Mathworks Inc.*** ](https://www.mathworks.com/) )  
 
 Thank you for using our software package.  
-We are happy if StereoScreening can help your research projects.  
+We are happy if this sample can somehow help your research projects.  
 
 **Stimulus presentation and tasks**
 
@@ -45,9 +45,9 @@ The package supports two types of tasks below.
   - press key 2 or right-mouse-click when the second stimulus is to near.  
 
 For more details, please read the descriptions below.  
-Also please check the header comments in ~/StereoScreening/Presentation/StereoScreening.m.  
+Also please check the header comments in ~/StereoConstantMethodsample/Presentation/StereoConstantMethodsample.m.  
 
-**Acknowledgment**
+## **Acknowledgment**
 
 The StereoConstantMethodsample package uses **Psychtoolboox** library for generating/presenting/controlling binocular disparity stimuli, and **Psignifit (mpsignifit)** tool for computing the subject discrimination thresholds and psychometric functions. We would like to express our sincere gratitude to the authors for sharing these great tools.  
 
@@ -66,7 +66,8 @@ The StereoConstantMethodsample package uses **Psychtoolboox** library for genera
            [ref 1] [https://github.com/wichmann-lab/psignifit/wiki](https://github.com/wichmann-lab/psignifit/wiki)  
            [ref 2] [https://github.com/wichmann-lab/psignifit/archive/master.zip](https://github.com/wichmann-lab/psignifit/archive/master.zip)  
 
-**How to run the script**
+
+## **How to run the script**
 
 1. On the MATLAB shell, please change the working directory to  
    *~/StereoConstantMethodsample/Presentation/*  
@@ -82,13 +83,13 @@ The StereoConstantMethodsample package uses **Psychtoolboox** library for genera
    the second variable should be 1 or 2,  
 
 For more details, please see the documents in *StereoConstantMethodsample.m*  
-Also please see the parameter files in *~/StereoConstantMethodsample/Presentation/subj/_DEFAULT_*.  
+Also please see the parameter files in *~/StereoConstantMethodsample/Presentation/subj/_DEFAULT_/*.  
 
 For checking the routines of stimulus generations, please see  
 *~/StereoConstantMethodsample/Generation* and *~/StereoConstantMethodsample/Common* directories.
 
 
-**Usage**
+## **Usage**
 
 ```Matlab
 function StereoConstantMethodsample(subjID,acq,:displayfile,:stimlusfile,:gamma_table,:overwrite_flg,:force_proceed_flag)
@@ -96,14 +97,14 @@ function StereoConstantMethodsample(subjID,acq,:displayfile,:stimlusfile,:gamma_
 ```
 
 
-**Example**
+## **Example**
 
 ```Matlab
 >> StereoConstantMethodsample('s01',1,'nf_display.m','nf_stimulus_exp1.m')
 ```
 
 
-**Input variables**
+## **Input variables**
 
 <pre>
 sujID         : ID of subject, string, such as 's01'
@@ -142,12 +143,12 @@ force_proceed_flag : (optional) whether proceeding stimulus presentatin without 
 NOTE:
 displayfile & stimulusfile should be located at
 ~/StereoConstantMethodsample/Presentation/subjects/(subjID)/, like
-~/StereoConstantMethodsample/Presentation/subjects/(subjID)/nearfar_display.m
-~/StereoConstantMethodsample/Presentation/subjects/(subjID)/
+~/StereoConstantMethodsample/Presentation/subjects/(subjID)/nearfar_display.m, and
+~/StereoConstantMethodsample/Presentation/subjects/(subjID)/nearfar_stimulus.m
 </pre>
 
 
-**Output variable and result file** 
+## **Output variable and result file** 
 
 <pre>
 no output variable. the results (stimulus presentation timings, participant responses) are saved in
@@ -156,7 +157,7 @@ as (subjID)_StereoConstantMethodsample_results_run_(run_num).mat.
 </pre>
 
 
-**Details of displayfile**
+## **Details of displayfile**
 
 An example of "displayfile":  
 
@@ -210,7 +211,7 @@ dparam.ScrWidth=1920;
 ````
 
 
-**Details of stimulusfile**
+## **Details of stimulusfile**
 
 An example of "stimulusfile":  
 
