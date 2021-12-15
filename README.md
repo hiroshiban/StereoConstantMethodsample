@@ -2,7 +2,7 @@
 
 <div align="right">
 Created    : "2010-08-17 12:25:39 ban"<br>
-Last Update: "2021-12-13 07:29:32 ban"
+Last Update: "2021-12-15 15:20:59 ban"
 </div>
 
 <br>
@@ -20,7 +20,7 @@ Last Update: "2021-12-13 07:29:32 ban"
 ## **StereoConstantMethodsample**
 
 
-![StereoConstantMethodsample](imgs/StereoConstantMethodsample.png)  
+![StereoConstantMethodsample](doc/images/StereoConstantMethodsample.png)  
 
 **Sample stimulus presentation codes for stereo vision psychophysics experiment (Constant method) in our research group**  
 
